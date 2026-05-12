@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip - Planora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<section class="plan-section">
+
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+    <h1>Plan Your Trip</h1>
+
+    <form id="planForm">
+
+        <input type="text" id="destination" placeholder="Destination" required>
+
+        <input type="text" id="from" placeholder="From (City)" required>
+
+        <div class="dates">
+            <input type="date" id="startDate" required>
+            <input type="date" id="endDate" required>
+        </div>
+
+        <input type="number" id="travelers" placeholder="Number of Travelers" required>
+
+        <select id="type">
+            <option>Adults</option>
+            <option>Children</option>
+        </select>
+
+        <button type="submit">Generate Plan</button>
+
+    </form>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

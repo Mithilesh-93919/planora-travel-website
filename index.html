@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planora</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- 🔥 NAVBAR -->
+<header class="navbar">
+    <h1 class="logo">Planora</h1>
+
+    <nav>
+        <a href="destinations.html">Destinations</a>
+        <a href="#">Experiences</a>
+        <a href="#">Plan Trip</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- 🌍 HERO GRID SECTION -->
+<section class="hero">
+
+    <!-- SEARCH BAR (PUT THIS FIRST) -->
+    <div class="search-bar">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search destinations...">
+            <div id="suggestions"></div>
+        </div>
+        <button onclick="searchDestination()">Search</button>
+    </div>
+
+    <!-- SLIDER STARTS BELOW -->
+    <div class="slider-container">
+    <div class="slider-track">
+
+        <div class="slide" onclick="goToPlan('Taj Mahal')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg">
+            <h2>Taj Mahal</h2>
+        </div>
+
+        <div class="slide" onclick="goToPlan('Eiffel Tower')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg">
+            <h2>Eiffel Tower</h2>
+        </div>
+
+        <div class="slide" onclick="goToPlan('Great Wall of China')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/GreatWallBadaling.jpg" onerror="this.src='https://source.unsplash.com/600x400/?greatwall'">
+            <h2>Great Wall of China</h2>
+        </div>
+
+        <div class="slide" onclick="goToPlan('Machu Picchu')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg">
+            <h2>Machu Picchu</h2>
+        </div>
+
+        <div class="slide" onclick="goToPlan('Colosseum')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg">
+            <h2>Colosseum</h2>
+        </div>
+
+        <div class="slide" onclick="goToPlan('Petra')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Al_Khazneh_Petra_edit_2.jpg">
+            <h2>Petra</h2>
+        </div>
+
+        <div class="slide" onclick="goToPlan('Christ the Redeemer')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Christ_on_Corcovado_mountain.JPG">
+            <h2>Christ the Redeemer</h2>
+        </div>
+
+        <div class="slide" onclick="goToPlan('Pyramids of Giza')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg">
+            <h2>Pyramids of Giza</h2>
+        </div>
+
+    </div>
+    
+    <div class="controls">
+        <button onclick="prevSlide(event)">❮</button>
+        <button onclick="nextSlide(event)">❯</button>
+    </div>
+</div>
+
+</section>
+
+<section class="destinations">
+
+    <h2>Explore Destinations</h2>
+
+    <div class="dest-grid">
+
+        <div class="dest-card" onclick="goToPlan('Maldives')">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>Maldives</h3>
+        </div>
+
+        <div class="dest-card" onclick="goToPlan('Paris')">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>Paris</h3>
+        </div>
+
+        <div class="dest-card" onclick="goToPlan('Dubai')">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>Dubai</h3>
+        </div>
+
+        <div class="dest-card" onclick="goToPlan('Switzerland')">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>Switzerland</h3>
+        </div>
+
+        <div class="dest-card" onclick="goToPlan('Bali')">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>Bali</h3>
+        </div>
+
+        <div class="dest-card" onclick="goToPlan('New York')">
+            <img src="https://images.unsplash.com/photo-1526481280691-3c469c9a5a8d" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>New York</h3>
+        </div>
+
+        <div class="dest-card" onclick="goToPlan('London')">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>London</h3>
+        </div>
+
+        <div class="dest-card" onclick="goToPlan('Tokyo')">
+            <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c" onerror="this.src='https://source.unsplash.com/600x400/?travel'">
+            <h3>Tokyo</h3>
+        </div>
+
+    </div>
+
+    <div class="explore-more-home">
+        <button onclick="goToDestinations()">Explore More Destinations</button>
+    </div>
+
+</section>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

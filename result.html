@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Trip Plan - Planora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="loader" class="loader">
+    <h2>🤖 Generating your perfect trip...</h2>
+</div>
+
+<section class="result-section" id="resultContent" style="display: none;">
+
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+    <h1 id="resultTitle">Your Trip Plan</h1>
+
+    <div class="result-image">
+        <img id="destinationImage">
+    </div>
+
+    <div class="results-grid">
+
+        <!-- HOTELS (FULL WIDTH) -->
+        <div class="full">
+            <div class="result-box">
+                <h2>🏨 Hotels</h2>
+                <div class="hotel-container" id="hotelContainer"></div>
+            </div>
+        </div>
+
+        <!-- FLIGHTS (FULL WIDTH) -->
+        <div class="full">
+            <div class="result-box">
+                <h2>✈️ Flights</h2>
+                <div class="flight-container" id="flightContainer"></div>
+            </div>
+        </div>
+
+        <!-- ROW: ITINERARY + ATTRACTIONS -->
+        <div class="grid-row">
+            <div class="half">
+                <div class="result-box">
+                    <h2>📅 Itinerary</h2>
+                    <div id="itinerary"></div>
+                </div>
+            </div>
+
+            <div class="half">
+                <div class="result-box">
+                    <h2>📍 Attractions</h2>
+                    <div id="places"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOD -->
+        <div class="full">
+            <div class="result-box">
+                <h2>🍜 Food</h2>
+                <ul id="foodList"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="explore-more">
+        <button onclick="goToDestinations()">Explore More Destinations</button>
+    </div>
+
+    <div style="text-align: center; padding: 20px;">
+        <button class="regen-btn" onclick="generateResults()">🔄 Regenerate Plan</button>
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
